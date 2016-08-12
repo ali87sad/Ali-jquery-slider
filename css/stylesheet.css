@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.clear-fix {
+    clear: both;
+}
+.test {
+    margin: 50px auto;
+    height: 600px;
+    width: 200px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+.test img {
+    margin-left: -200px;
+    width: 800px;
+    height: auto;
+}
+
+.sliderlinks {
+    display: none;
+}
+
+.slider {
+    margin: 100px auto;
+    height: 300px;
+    width: 300px;
+    perspective-origin:50% 50%;
+    transform-style: preserve-3d;
+    perspective: 2000px;
+    position: relative;
+}
+.slider .cube1,
+.slider .cube2,
+.slider .cube3,
+.slider .cube4 {
+    height: 100%;
+    width: 25%;
+    perspective-origin:50% 50%;
+    transform-style: preserve-3d;
+    position: relative;
+    float: left;
+    transition: all 1s ease-in-out;
+    
+}
+
+.face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.face img{
+    transform: rotateX(0deg);
+}
+
+.slider .face1 {
+    height: 100%;
+    width: 100%;
+    background-color: brown;
+    transform: translate3d(0,0,150px);
+}
+.slider .face2 {
+    height: 100%;
+    width: 100%;
+    background-color: brown;
+    transform: rotateX(90deg) translate3d(0,0,150px);
+}
+.slider .face3 {
+    height: 100%;
+    width: 100%;
+    background-color: brown;
+    transform: rotateX(-90deg) translate3d(0,0,150px);
+}
+.slider .face4 {
+    height: 100%;
+    width: 100%;
+    background-color: brown;
+    transform:rotateX(180deg) translate3d(0,0,150px);
+}
+.slider .face5 {
+    height: 100%;
+    width: 400%;
+    //background-color: #2c72c3;
+    transform:translateX(-50%)rotateY(90deg) translate3d(0,0,75px);
+}
+
+.slider .face6 {
+    height: 100%;
+    width: 400%;
+    //background-color: #7d2cc3;
+    transform:rotateY(90deg) translate3d(0,0,-150px);
+}
+.cube1 .face1 img,
+.cube1 .face2 img,
+.cube1 .face3 img,
+.cube1 .face4 img {
+    margin: 0;
+}
+.cube2 .face1 img,
+.cube2 .face2 img,
+.cube2 .face3 img,
+.cube2 .face4 img {
+    margin-left: -100%;
+}
+.cube3 .face1 img,
+.cube3 .face2 img,
+.cube3 .face3 img,
+.cube3 .face4 img {
+    margin-left: -200%;
+}
+.cube4 .face1 img,
+.cube4 .face2 img,
+.cube4 .face3 img,
+.cube4 .face4 img {
+    margin-left: -300%;
+}
